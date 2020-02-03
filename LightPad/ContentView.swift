@@ -11,11 +11,21 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color.white
+            Color.gray
             .edgesIgnoringSafeArea(.all)
-            Text("Hello LightPad user!")
-                .foregroundColor(.blue)
-         }
+            VStack {
+                Image("Title")
+                Text("Hello LightPad user!")
+                    .foregroundColor(.red)
+                Spacer()
+                Button(action: {
+                    //vad som händer när man klickar på knappen
+                }) {
+                    Text("Lit me up!")
+                        .foregroundColor(.yellow)
+                }
+            }.padding()
+        }
     }
 }
 
