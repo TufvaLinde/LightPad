@@ -13,6 +13,7 @@
 		C5B3F24E23E8B2E7002AEE0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B3F24D23E8B2E7002AEE0F /* Assets.xcassets */; };
 		C5B3F25123E8B2E7002AEE0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B3F25023E8B2E7002AEE0F /* Preview Assets.xcassets */; };
 		C5B3F25423E8B2E7002AEE0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B3F25223E8B2E7002AEE0F /* LaunchScreen.storyboard */; };
+		C5B3F25C23E997B9002AEE0F /* video.MOV in Resources */ = {isa = PBXBuildFile; fileRef = C5B3F25B23E997B9002AEE0F /* video.MOV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C5B3F25023E8B2E7002AEE0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C5B3F25323E8B2E7002AEE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5B3F25523E8B2E7002AEE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5B3F25B23E997B9002AEE0F /* video.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = video.MOV; path = ../../../Downloads/video.MOV; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				C5B3F24923E8B2E3002AEE0F /* SceneDelegate.swift */,
 				C5B3F24B23E8B2E3002AEE0F /* ContentView.swift */,
 				C5B3F24D23E8B2E7002AEE0F /* Assets.xcassets */,
+				C5B3F25B23E997B9002AEE0F /* video.MOV */,
 				C5B3F25223E8B2E7002AEE0F /* LaunchScreen.storyboard */,
 				C5B3F25523E8B2E7002AEE0F /* Info.plist */,
 				C5B3F24F23E8B2E7002AEE0F /* Preview Content */,
@@ -133,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B3F25C23E997B9002AEE0F /* video.MOV in Resources */,
 				C5B3F25423E8B2E7002AEE0F /* LaunchScreen.storyboard in Resources */,
 				C5B3F25123E8B2E7002AEE0F /* Preview Assets.xcassets in Resources */,
 				C5B3F24E23E8B2E7002AEE0F /* Assets.xcassets in Resources */,
