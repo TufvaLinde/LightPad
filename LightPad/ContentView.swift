@@ -10,41 +10,90 @@ import SwiftUI
 import AVKit
 import AVFoundation
 
-struct ContentView: View {
+struct LightView: View {
+    @State var hideStatusBar = true
+
     var body: some View {
         ZStack {
-            Color(red:0.72, green:0.72, blue:0.94, opacity:1.0)
+            Color.white
                 .edgesIgnoringSafeArea(.all)
-            VStack {
-                Image("Title")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 600.0,height: 600.0)
-                Spacer()
-                NavigationLink(destination: Text("")) {
-                    Text("Lit me up!")
-                        .font(.largeTitle)
-                        .fontWeight(.thin)
-                        .foregroundColor(Color(red: 1.0, green: 0.5, blue: 0.0, opacity: 1.0))
-                }.buttonStyle(PlainButtonStyle())
-                Spacer()
-            }
-        }.onAppear(perform: playVideo)
-    }
-
-    func playVideo() {
-        guard let path = Bundle.main.path(forResource: "video", ofType:"MOV") else {
-            debugPrint("video.MOV not found")
-            return
         }
-        let player = AVPlayer(url: URL(fileURLWithPath: path))
-        let playerController = AVPlayerViewController()
-        playerController.player = player
-        present(playerController, animated: true) {
-            player.play()
-        }
+        .statusBar(hidden: hideStatusBar)
     }
 }
+
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            ZStack {
+                Color(red:0.72, green:0.72, blue:0.94, opacity:1.0)
+                VStack {
+                    Image("LightPad")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 600.0,height: 600.0)
+                    Spacer()
+                    NavigationLink(destination: LightView()) {
+                        Text("Lit me up!")
+                        .font(.largeTitle)
+                        .fontWeight(.thin)
+                        .foregroundColor(.black)
+                        .statusBar(hidden: true)
+                    }.foregroundColor(.white)
+                    Spacer()
+                }
+            }.edgesIgnoringSafeArea(.all)
+        }.navigationViewStyle(StackNavigationViewStyle())
+    }
+}
+
+
+//struct ContentView: View {
+//    @State var showingLightView = false
+//    @State var tag:Int? = nil
+//
+//    var body: some View {
+//        ZStack {
+//            Color(red:0.72, green:0.72, blue:0.94, opacity:1.0)
+//                .edgesIgnoringSafeArea(.all)
+//            VStack {
+//                Image("LightPad")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 600.0,height: 600.0)
+//                Spacer()
+//
+//                Button(action: {
+//                    // What to perform
+//                    self.showingLightView.toggle()
+//                }) {
+//                    // How the button looks like
+//                    Text("Lit me up!")
+//                        .font(.largeTitle)
+//                        .fontWeight(.thin)
+//                        .foregroundColor(Color(red: 1.0, green: 0.5, blue: 0.0, opacity: 1.0))
+//                }.sheet(isPresented: $showingLightView) {
+//                        LightView()
+//                }
+//                Spacer()
+//            }
+//        }
+//        //        .onAppear(perform: playVideo)
+//    }
+//
+////        func playVideo() {
+////            guard let path = Bundle.main.path(forResource: "video", ofType:"MOV") else {
+////                debugPrint("video.MOV not found")
+////                return
+////            }
+////            let player = AVPlayer(url: URL(fileURLWithPath: path))
+////            let playerController = AVPlayerViewController()
+////            playerController.player = player
+////            present(playerController, animated: true) {
+////                player.play()
+////            }
+////        }
+//}
 
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
